@@ -29,7 +29,7 @@ npm pack            # 生成 dsh-session-mover-0.1.0.tgz
       name: 'dsh-session-mover'
 ```
 
-该插件也可作为**动态插件**使用（宿主通过 `harness.handle('move-session')` 提供 RPC，客户端 `host.call('move-session')` 调用；静态安装时走 `webServer` 路由 `/session-mover/move-session`，两种方式都已内置）。
+`lib/client.js` 是已打包的浏览器 bundle（`window.__ModuleLoader__.load` 形态，与 `dsh-omni-bridge` 相同）；宿主 `lib/index.js` 在 `webServer` 上注册 `POST /session-mover/move-session` 路由供客户端调用。若作为**动态插件**运行，宿主同样提供 `harness.handle('move-session')` 配对（两种方式都已内置，逻辑共用）。
 
 ## 使用
 
