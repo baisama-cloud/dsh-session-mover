@@ -1,0 +1,46 @@
+{
+  "name": "dsh-session-mover",
+  "version": "0.1.0",
+  "description": "Drag sessions to another workspace in the DeepSeek Harness (DSH) web GUI: grab a session row in the sidebar and drop it onto another workspace header to move it (clone with full history + archive the original). DSH 侧边栏会话直拖：把会话行拖到其他工作区标题行即可移动（完整历史克隆 + 原会话归档）。",
+  "license": "MIT",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": {
+      "default": "./lib/index.js"
+    },
+    "./client": {
+      "default": "./lib/client.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": []
+    }
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "deepseek",
+    "harness",
+    "dsh",
+    "dsh-plugin",
+    "workspace",
+    "session",
+    "drag-drop",
+    "move",
+    "web-ui"
+  ]
+}
