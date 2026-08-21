@@ -14,7 +14,7 @@
 
 ## 安装
 
-与 DSH 插件包相同的分发方式（参考 `dsh-omni-bridge`）：
+与 DSH 插件包相同的分发方式：
 
 ```bash
 # 克隆到本地后，用 dsh 的 bundle patch 机制挂载
